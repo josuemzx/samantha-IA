@@ -102,7 +102,7 @@ $(function (){
                 chat.msg +
                 '<span class="time">' + getDateTime(chat.time) + '</span>'+
                 '</div></li>';
-            if (chat.from == 'James' && chat.time == _json.chats.slice(-1)[0].time){
+            if (chat.from == 'Samantha' && chat.time == _json.chats.slice(-1)[0].time){
                 demo(userID = userID, dataString = dataString)
             }
             else {
@@ -112,7 +112,7 @@ $(function (){
 	};
 	
     async function demo(userID, dataString) {
-        pendingRender('James');
+        pendingRender('Samantha');
         await new Promise(r => setTimeout(r, 5000));
         $('#viewport .chats ul>li.pending').remove();
         $('#viewport #'+ userID +' .chats>ul').append(dataString);	
@@ -189,7 +189,7 @@ $(function (){
 				_json.chats.push(temp);
 				console.log(_json);
 				newMsgRender(temp);
-                pendingRender('James');
+                pendingRender('Samantha');
                 postData();
 			} else {
 				$('#viewport .chats ul>li.pending').remove();
@@ -204,11 +204,11 @@ $(function (){
     // RESET CONVERSATION
     function resetConv(){
         _json = {
-            users: ["James", "You"],
+            users: ["Samantha", "You"],
             chats: [{
-                from: 'James',
-                msg: 'Hi, what do you want to chat about?',
-                time: '1533263925814',
+                from: 'Samantha',
+                msg: 'Hola!',
+                time: '15332',
                 action: ''
             }]
         }
@@ -245,7 +245,7 @@ $(function (){
                     _json.chats.push(temp);
                     console.log(_json);
                     newMsgRender(temp);
-                    pendingRender('James');
+                    pendingRender('Samantha');
                     postData();
                 } else {
                     $('#viewport .chats ul>li.pending').remove();
