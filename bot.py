@@ -1,37 +1,16 @@
-import os
-import telegram
-from telegram import InlineKeyboardMarkup, InlineKeyboardButton
-from telegram.ext import Updater, CommandHandler
+from bs4 import BeautifulSoup  #del módulo bs4, necesitamos BeautifulSoup
+import requests
+import schedule
 
 
-def handle_start(update, context):
+def bot_send_text(bot_message):
 
-    update.message.reply_text(
-        text=(
-            'This bot has been migrated to a new one: @ForwarderGeniusBot.'
-            '\nGo there and run /start to continue'
-        ),
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(text='Go to the bot', url='https://t.me/ForwarderGeniusBot')]
-        ])
-    )
+    bot_token = '5609449821:AAErR4sam9v4h3znuKRQvFBizTYYRS5SO4Q'
+    bot_chatID = '2143299867'
+    send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + '&parse_mode=Markdown&text=' + bot_message
 
+    response = requests.get(send_text)
 
-if __name__ == '__main__':
+    return response
 
-    token = os.environ['TOKEN']
-
-    bot = telegram.Bot(token=token)
-
-    updater = Updater(token=token, use_context=True)
-
-    dp = updater.dispatcher
-    dp.add_handler(
-        CommandHandler('start', handle_start)
-    )
-
-    updater.start_polling()
-
-    print(f'running at @{bot.username}')
-
-    updater.idle()
+test_bot = bot_send_text('¡Hola, Telegram!')
