@@ -36,7 +36,7 @@ def page():
     if request.method == 'POST':
         current_messages = request.json
         msg = current_messages['chats'][-1]['msg']
-        responses = query(msg,'Josue/BETO-espanhol-Squad2',API_TOKEN)['conversation']['generated_responses']
+        responses = query(msg,'facebook/blenderbot_small-90M',API_TOKEN)['conversation']['generated_responses']
         response = responses[-1]
         current_messages['chats'].append({'from': 'Samantha', 'msg': response, 'time': str(round(time.time()*50)), 'action': ''})
         return current_messages
