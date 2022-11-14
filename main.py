@@ -6,9 +6,9 @@ import requests
 
 # Init first message
 current_messages = {
-		"users": ["James", "You"],
+		"users": ["Samantha", "You"],
 		"chats": [{
-			"from": 'James',
+			"from": 'Samantha',
 			"msg": 'Hi, what do you want to chat about?',
 			"action": ''
 		}]
@@ -38,7 +38,7 @@ def page():
         msg = current_messages['chats'][-1]['msg']
         responses = query(msg,'facebook/blenderbot_small-90M',API_TOKEN)['conversation']['generated_responses']
         response = responses[-1]
-        current_messages['chats'].append({'from': 'James', 'msg': response, 'time': str(round(time.time()*1000)), 'action': ''})
+        current_messages['chats'].append({'from': 'Samantha', 'msg': response, 'time': str(round(time.time()*1000)), 'action': ''})
         return current_messages
     
 
