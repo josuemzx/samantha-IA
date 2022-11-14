@@ -301,7 +301,7 @@ input:active {
 
 .hero-body {
 	position: fixed;
-    background: #CCE5FF
+    background: #CCE5FF;
 	width: 100%;
 	z-index: 1;
 	display: flex;
