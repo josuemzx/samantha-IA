@@ -9,7 +9,7 @@ current_messages = {
 		"users": ["Samantha", "You"],
 		"chats": [{
 			"from": 'Samantha',
-			"msg": 'Hi, what do you want to chat about?',
+			"msg": 'Hola',
 			"action": ''
 		}]
 	}
