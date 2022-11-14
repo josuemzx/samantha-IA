@@ -72,6 +72,7 @@ body {
 	padding: 1rem;
 	margin-bottom: 5rem;
 	overflow: auto;
+	background-color: #f1f1f1;
 }
 ul { padding: 0; }
 ul > li {
@@ -300,7 +301,7 @@ input:active {
 
 .hero-body {
 	position: fixed;
-    background: #2596be;
+    background: #CCE5FF
 	width: 100%;
 	z-index: 1;
 	display: flex;
