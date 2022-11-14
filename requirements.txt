@@ -1,6 +1,5 @@
-
 -f https://download.pytorch.org/whl/torch_stable.html
-torch==1.11.0+cpu
+certifi==2021.10.8
 charset-normalizer==2.0.12
 click==8.1.2
 filelock==3.6.0
