@@ -301,4 +301,4 @@ let mockChat = {
     document.getElementById('time').innerHTML = time
     
   }
-  setInterval(getCurrentTime, 10000);
+  setInterval(getCurrentTime, 1000);
