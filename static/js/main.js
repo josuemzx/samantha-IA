@@ -208,7 +208,7 @@ $(function (){
             chats: [{
                 from: 'Samantha',
                 msg: 'Hola!',
-                time: '15332',
+                time: '150',
                 action: ''
             }]
         }
