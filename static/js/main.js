@@ -113,7 +113,7 @@ $(function (){
 	
     async function demo(userID, dataString) {
         pendingRender('Samantha');
-        await new Promise(r => setTimeout(r, 5000));
+        await new Promise(r => setTimeout(r, 50));
         $('#viewport .chats ul>li.pending').remove();
         $('#viewport #'+ userID +' .chats>ul').append(dataString);	
     }

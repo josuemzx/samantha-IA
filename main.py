@@ -13,8 +13,8 @@ current_messages = {
 			"action": ''
 		}]
 	}
-current_messages['chats'][0]['time'] = str(round(time.time()*500))
-print(str(round(time.time()*500)), flush=True)
+current_messages['chats'][0]['time'] = str(round(time.time()*50))
+print(str(round(time.time()*50)), flush=True)
 API_TOKEN = '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' 
 # Define query function
 def query(payload, model_id, api_token):
@@ -38,7 +38,7 @@ def page():
         msg = current_messages['chats'][-1]['msg']
         responses = query(msg,'flair/ner-spanish-large',API_TOKEN)['conversation']['generated_responses']
         response = responses[-1]
-        current_messages['chats'].append({'from': 'Samantha', 'msg': response, 'time': str(round(time.time()*500)), 'action': ''})
+        current_messages['chats'].append({'from': 'Samantha', 'msg': response, 'time': str(round(time.time()*50)), 'action': ''})
         return current_messages
     
 
