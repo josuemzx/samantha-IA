@@ -36,7 +36,7 @@ def page():
     if request.method == 'POST':
         current_messages = request.json
         msg = current_messages['chats'][-1]['msg']
-        responses = query(msg,'inigopm/beto-base-spanish-squades2',API_TOKEN)['conversation']['generated_responses']
+        responses = query(msg,'flair/ner-spanish-large',API_TOKEN)['conversation']['generated_responses']
         response = responses[-1]
         current_messages['chats'].append({'from': 'Samantha', 'msg': response, 'time': str(round(time.time()*500)), 'action': ''})
         return current_messages
